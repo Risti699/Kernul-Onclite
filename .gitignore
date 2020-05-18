@@ -118,3 +118,11 @@ all.config
 
 # fetched Android config fragments
 kernel/configs/android-*.cfg
+
+# Ignore bullshit
+/AnyKernel3/
+/clang/
+/libufdt/
+/out/
+/stock/
+/stock_32/

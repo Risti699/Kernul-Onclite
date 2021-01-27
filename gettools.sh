@@ -13,7 +13,7 @@ git clone https://github.com/Risti699/AnyKernel3 -b master --depth=1
 
 #Download Clang
 if [ ! -d clang ]; then
-git clone https://github.com/silont-project/silont-clang.git --depth=1
+git clone https://github.com/gengkapak/gengkapak-clang.git --depth=1
 fi
 
 # Download libufdt

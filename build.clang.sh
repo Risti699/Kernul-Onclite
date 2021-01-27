@@ -17,7 +17,7 @@ ZIP_DIR=$KERNEL_DIR/AnyKernel3
 CONFIG=onc_defconfig
 CROSS_COMPILE="aarch64-linux-android-"
 CROSS_COMPILE_ARM32="arm-linux-androideabi-"
-PATH=:"${KERNEL_DIR}/silont-clang/bin:${PATH}:${KERNEL_DIR}/stock/bin:${PATH}:${KERNEL_DIR}/stock_32/bin:${PATH}"
+PATH=:"${KERNEL_DIR}/gengkapak-clang/bin:${PATH}:${KERNEL_DIR}/stock/bin:${PATH}:${KERNEL_DIR}/stock_32/bin:${PATH}"
 
 # Export
 export ARCH=arm64
@@ -76,11 +76,11 @@ END=$(date -u +%s)
 DURATION=$(( END - START ))
 
 cd $KERNEL_DIR/AnyKernel3
-mv "$(echo SiLonT-*.zip)" "$KERNEL_DIR"
+mv "$(echo JandaX-*.zip)" "$KERNEL_DIR"
 cd $KERNEL_DIR
 
 # Get Telegram Script
-wget https://raw.githubusercontent.com/MumetNgoding/Magic-Script/main/telegram
+wget https://raw.githubusercontent.com/Risti699/Magic-Script/main/telegram
 chmod +x telegram
 
 # Add New Variable
@@ -88,12 +88,12 @@ KBUILD_BUILD_TIMESTAMP=$(date)
 export KBUILD_BUILD_TIMESTAMP
 CPU=$(lscpu | sed -nr '/Model name/ s/.*:\s*(.*) @ .*/\1/p')
 HEAD_COMMIT="$(git rev-parse HEAD)"
-GITHUB_URL="https://github.com/MumetNgoding/BrynKernel-AOSP/commits/"
+GITHUB_URL="https://github.com/Risti699/JandaX/commits/"
 COMMIT=$(git log --pretty=format:'%h: %s' -1)
 
 # Get Script Source
-./telegram -f "$(echo -e SiLonT-*.zip)" "$(echo ⚒️  [*BUILDING*] ⚒️  ️$'\n' HEAD MESSAGE:$'\n' $COMMIT $'\n' COMMIT URL: $'\n' ${GITHUB_URL}${HEAD_COMMIT} $'\n' DATE: $'\n' $KBUILD_BUILD_TIMESTAMP $'\n' BUILD USING: $'\n' $CPU $'\n' CC AUTHOR: $'\n' @BryanHafidzTorvalds $'\n' DURATION: $'\n' $DURATION Seconds $'\n' ⚒️  [*COMPLETE*] ⚒️  )"
-rm "$(echo SiLonT-*.zip)"
+./telegram -f "$(echo -e JandaX-*.zip)" "$(echo ⚒️  [*BUILDING*] ⚒️  ️$'\n' HEAD MESSAGE:$'\n' $COMMIT $'\n' COMMIT URL: $'\n' ${GITHUB_URL}${HEAD_COMMIT} $'\n' DATE: $'\n' $KBUILD_BUILD_TIMESTAMP $'\n' BUILD USING: $'\n' $CPU $'\n' CC AUTHOR: $'\n' @kaguyaasama $'\n' DURATION: $'\n' $DURATION Seconds $'\n' ⚒️  [*COMPLETE*] ⚒️  )"
+rm "$(echo JandaX-*.zip)"
 rm telegram
 echo -e "\n(!) Done Push to Telegram"
 # Build end

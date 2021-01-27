@@ -6,10 +6,10 @@ jobs:
    steps:
       - run:
           command: |
-           git config --global user.name "MumetNgoding"
-           git config --global user.email "nugroho31.com@gmail.com"
-           git clone https://github.com/MumetNgoding/BrynKernel-AOSP Q
-           cd Q
+           git config --global user.name "Risti699"
+           git config --global user.email "wahhap10@gmail.com "
+           git clone https://github.com/Risti699/JFLA-Karamel JandaX
+           cd JandaX
            chmod a+x gettools.sh
            ./gettools.sh
 workflows:

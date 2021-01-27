@@ -2,14 +2,10 @@ version: 2.1
 jobs:
   compile:
    docker:
-      - image: telosalliance/ubuntu-20.04:latest
+      - image: fadlyas/kernel_dockerfile:latest
    steps:
       - run:
           command: |
-           git clone https://github.com/akhilnarang/scripts
-           cd scripts
-           bash setup/android_build_env.sh
-           cd .. 
            git config --global user.name "Risti699"
            git config --global user.email "wahhap10@gmail.com "
            git clone https://github.com/Risti699/JFLA-Karamel JandaX

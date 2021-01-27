@@ -1,7 +1,7 @@
 jobs:
   build:
     docker:
-      - image: cimg/stable:20.04
+      - image: cimg/2021.01-20.04
     steps:
       - checkout
       # Whatever you want to do

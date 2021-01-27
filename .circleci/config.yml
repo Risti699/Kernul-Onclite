@@ -2,18 +2,11 @@ version: 2.1
 jobs:
   compile:
    docker:
-      - image: bryanhafidz/bryan-docker:0x01
+      - image: gengkapak/builder:latest
    steps:
-      - run:
-          command: |
-           git config --global user.name "Risti699"
-           git config --global user.email "wahhap10@gmail.com "
-           git clone https://github.com/Risti699/JFLA-Karamel JandaX
-           cd JandaX
-           chmod a+x gettools.sh
-           ./gettools.sh
+      - name : Build kernel
 workflows:
   version: 2.1
   cooking:
     jobs:
-      - compile
+      - build

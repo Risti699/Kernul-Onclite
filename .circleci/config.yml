@@ -9,4 +9,4 @@ workflows:
   version: 2.1
   cooking:
     jobs:
-      - build
+      - compile

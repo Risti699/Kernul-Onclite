@@ -76,7 +76,7 @@ END=$(date -u +%s)
 DURATION=$(( END - START ))
 
 cd $KERNEL_DIR/AnyKernel3
-mv "$(echo JandaX-*.zip)" "$KERNEL_DIR"
+mv "$(echo JandaX[MIUI]-*.zip)" "$KERNEL_DIR"
 cd $KERNEL_DIR
 
 # Get Telegram Script
@@ -92,8 +92,8 @@ GITHUB_URL="https://github.com/Risti699/JandaX/commits/"
 COMMIT=$(git log --pretty=format:'%h: %s' -1)
 
 # Get Script Source
-./telegram -f "$(echo -e JandaX-*.zip)" "$(echo ⚒️  [*BUILDING*] ⚒️  ️$'\n' HEAD MESSAGE:$'\n' $COMMIT $'\n' COMMIT URL: $'\n' ${GITHUB_URL}${HEAD_COMMIT} $'\n' DATE: $'\n' $KBUILD_BUILD_TIMESTAMP $'\n' BUILD USING: $'\n' $CPU $'\n' CC AUTHOR: $'\n' @kaguyaasama $'\n' DURATION: $'\n' $DURATION Seconds $'\n' ⚒️  [*COMPLETE*] ⚒️  )"
-rm "$(echo JandaX-*.zip)"
+./telegram -f "$(echo -e JandaX[MIUI]-*.zip)" "$(echo ⛏️  [*BUILDING*] ⛏️  ️$'\n' HEAD MESSAGE:$'\n' $COMMIT $'\n' COMMIT URL: $'\n' ${GITHUB_URL}${HEAD_COMMIT} $'\n' DATE: $'\n' $KBUILD_BUILD_TIMESTAMP $'\n' BUILD USING: $'\n' $CPU $'\n' CC AUTHOR: $'\n' @kaguyaasama $'\n' DURATION: $'\n' $DURATION Seconds $'\n' 📎  [*COMPLETE*] 📎️  )"
+rm "$(echo JandaX[MIUI]-*.zip)"
 rm telegram
 echo -e "\n(!) Done Push to Telegram"
 # Build end
